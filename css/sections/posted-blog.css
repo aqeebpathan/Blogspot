@@ -1,0 +1,35 @@
+.posted-blog__exit {
+  margin: 20px 20px 0 20px;
+
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+}
+
+.posted-blog__img {
+  padding: 20px;
+
+  width: 100%;
+  height: 30rem;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.posted-blog_title {
+  margin: 20px;
+}
+
+.posted-blog__content {
+  padding: 0 20px 20px 20px;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+/* ?????????????????????? */
+@media screen and (max-width: 550px) {
+  .posted-blog__img {
+    height: 15rem;
+  }
+}

@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+/* other css file imports */
+@import url("sections/hero.css");
+@import url("sections/header.css");
+@import url("sections/blog.css");
+@import url("sections/posted-blog.css");
+@import url("sections/footer.css");
+@import url("sections/news.css");
+
+/* Font import*/
+@font-face {
+  font-family: "PPtelegraf-regular";
+  src: url("../font/PPTelegraf-Regular.otf");
+}
+
+@font-face {
+  font-family: "PPtelegraf-bold";
+  src: url("../font/PPTelegraf-UltraBold.otf");
+}
+
+/* CUSTOM PROPERTY */
+:root {
+  --primary-font: "Poppins", sans-serif;
+
+  --primary-color: #fff;
+  --secondary-color: #121212;
+
+  --blue-color: hsl(232, 100%, 60%);
+  --black-300: #333333;
+}
+
+/* RESET  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+input,
+button {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-family: var(--primary-font);
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+}
+
+::selection {
+  color: #fff;
+  background: #121212;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #101010;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 888;
+}
+
+.modal {
+  position: fixed;
+  width: 330px;
+  background: #fff;
+  top: 250px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 20px;
+  color: #101010;
+  border-radius: 1rem;
+  transition: all 0.4s;
+  z-index: 999;
+  text-align: center;
+}
+
+.bi-x::before {
+  content: "\00d7";
+}
+
+.close-modal {
+  position: absolute;
+  right: 6%;
+  top: 10%;
+  font-size: 20px;
+}

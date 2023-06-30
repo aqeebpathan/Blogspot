@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/vite.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Blogspot</title>
+
+</head>
+
+<body>
+  <header id="home">
+    <nav class="header__nav">
+      <div class="header__logo ">
+        <h4 data-aos="fade-down">BlogSpot.</h4>
+        <button class="menu-btn " data-aos="fade-down">Menu</button>
+      </div>
+
+      <ul class="header__menu " data-aos="fade-down">
+        <li><a href="" style="font-weight: 500;">Home</a></li>
+        <li><a href="news.html">News Feed</a></li>
+        <li><a href="#">Upcoming Events</a></li>
+        <li><a href="#">Jobs</a></li>
+        <button><img src="assets/search.svg" alt="search" srcset="">Search</button>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content" data-aos="fade-right">
+      <div class="hero-content-info">
+        <h1 class="hero-content__title">
+          <strong>Unleash Your Curiosity.</strong>
+          Dive into a World of Engaging Blogs and Inspiring Stories
+        </h1>
+      </div>
+    </div>
+
+    <div class="hero-newsletter" data-aos="fade-up">
+      <form class="hero-newsletter-form">
+        <input type="email" placeholder="Enter your email">
+        <button class="hero-newsletter__subscribw-btn">Subscribe</button>
+      </form>
+
+      <div class="hero-newsletter-text">
+        <p>Discover Expert Insights, Inspiring Stories, and Practical Tips across Various Topics. </ps>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog">
+    <div class="blog-filter-container" data-aos="fade-right">
+      <ul>
+        <li class="blog-filter__category active-filter" data-filter='all' onclick="showDiv(0)">View All</li>
+        <li class="blog-filter__category " data-filter='design' onclick="showDiv(1)">Design</li>
+        <li class="blog-filter__category " data-filter='product' onclick="showDiv(2)">Research</li>
+        <li class="blog-filter__category " data-filter='development' onclick="showDiv(3)">Development</li>
+
+      </ul>
+
+      <div class="blog-filter-sub-category">
+        <div id="div0" class="hidden"></div>
+        <div id="div1" class="hidden" data-aos="fade-right">
+          <ul class="blog-sub-category">
+            <div>Design:</div>
+            <li class="sub-category__heading">Graphic Design</li>
+            <li class="sub-category__heading">Web Design</li>
+            <li class="sub-category__heading">Interior Design</li>
+            <li class="sub-category__heading">UX/UI Design</li>
+            <li class="sub-category__heading">Industrial Design</li>
+          </ul>
+        </div>
+        <div id="div2" class="hidden" data-aos="fade-right">
+          <ul class="blog-sub-category">
+            <div>Research:</div>
+            <li class="sub-category__heading">Scientific Research</li>
+            <li class="sub-category__heading">Social Science Research</li>
+            <li class="sub-category__heading">Medical Research</li>
+            <li class="sub-category__heading">Technology Research</li>
+            <li class="sub-category__heading">Environmental Research</li>
+          </ul>
+        </div>
+        <div id="div3" class="hidden" data-aos="fade-right">
+          <ul class="blog-sub-category">
+            <div>Development:</div>
+            <li class="sub-category__heading">Web Development</li>
+            <li class="sub-category__heading">Mobile App Development </li>
+            <li class="sub-category__heading">Full-Stack Development</li>
+            <li class="sub-category__heading">Cloud Computing and DevOps</li>
+            <li class="sub-category__heading">Data Science and Machine Learning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let currentDiv = null;
+
+      function showDiv(divNumber) {
+        // Hide the currently shown div
+        if (currentDiv !== null) {
+          currentDiv.style.display = "none";
+        }
+
+        // Show the clicked div
+        const div = document.getElementById("div" + divNumber);
+        div.style.display = "block";
+
+        // Update the currentDiv variable
+        currentDiv = div;
+
+      }
+    </script>
+
+    <div class="posted container">
+      <!-- Post 1 -->
+      <div class="posted-blog design">
+
+        <div class="posted-blog-image">
+          <img class="posted-blog__image"
+            src="https://images.unsplash.com/photo-1576153192396-180ecef2a715?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+            alt="">
+          <div class="posted-blog-image-wrapper">
+            <ul>
+              <li>Olivia Rhye</li>
+              <li>20 Jan 2022</li>
+            </ul>
+            <p class="posted-blog__category">Design</p>
+          </div>
+        </div>
+        <a href="posted-blog.html" class="posted-blog__title">UX review presentations</a>
+        <p class="posted-blog__description">How do you create compelling presentations that wow your
+          colleagues and impress your managers? Look no further.</p>
+        <div class="posted-blog__sub-category">
+          <ul class="blog-sub-category">
+            <li class="sub-category__heading">UX/UI Design</li>
+            <li class="sub-category__heading">Web Design</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="posted-blog development">
+
+        <div class="posted-blog-image">
+          <img class="posted-blog__image"
+            src="https://images.unsplash.com/photo-1564865878688-9a244444042a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+            alt="">
+          <div class="posted-blog-image-wrapper">
+            <ul>
+              <li>Olivia Rhye</li>
+              <li>20 Jan 2022</li>
+            </ul>
+            <p class="posted-blog__category">Development</p>
+          </div>
+        </div>
+        <a href="posted-blog.html" class="posted-blog__title">DevOps: Bridging the Gap for Seamless Software
+          Delivery</a>
+        <p class="posted-blog__description">EExploring the Synergy of Development and Operations for Agile and Efficient
+          Deployments.</p>
+        <div class="posted-blog__sub-category">
+          <ul class="blog-sub-category">
+            <li class="sub-category__heading">Cloud Computing and DevOps</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Post 3 -->
+      <div class="posted-blog product">
+
+        <div class="posted-blog-image">
+          <img class="posted-blog__image"
+            src="https://plus.unsplash.com/premium_photo-1661436503898-22329777bf6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHNjaWVudGlmaWMlMjByZXNlYXJjaCUyMGlubm92YXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+            alt="">
+          <div class="posted-blog-image-wrapper">
+            <ul>
+              <li>Olivia Rhye</li>
+              <li>20 Jan 2022</li>
+            </ul>
+            <p class="posted-blog__category">Research</p>
+          </div>
+        </div>
+        <a href="posted-blog.html" class="posted-blog__title">The Research Journey: Navigating the Path to Innovation
+          and Breakthroughs</a>
+        <p class="posted-blog__description">From Curiosity to Impact: Unraveling the Process of Scientific Inquiry</p>
+        <div class="posted-blog__sub-category">
+          <ul class="blog-sub-category">
+            <li class="sub-category__heading">Scientific Research</li>
+            <li class="sub-category__heading">Environmental Research</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Post 1 -->
+      <div class="posted-blog development">
+
+        <div class="posted-blog-image">
+          <img class="posted-blog__image"
+            src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNsb3VkJTIwY29tcHV0aW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+            alt="">
+          <div class="posted-blog-image-wrapper">
+            <ul>
+              <li>Olivia Rhye</li>
+              <li>20 Jan 2022</li>
+            </ul>
+            <p class="posted-blog__category">Development</p>
+          </div>
+        </div>
+        <a href="posted-blog.html" class="posted-blog__title">Cloud Migration Made Easy: Navigating the Journey to Cloud
+          Computing</a>
+        <p class="posted-blog__description">Strategies, Best Practices, and Considerations for Seamlessly Transitioning
+          to the Cloud.</p>
+        <div class="posted-blog__sub-category">
+          <ul class="blog-sub-category">
+            <li class="sub-category__heading">Data Science and Machine Learning</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="posted-blog design">
+
+        <div class="posted-blog-image">
+          <img class="posted-blog__image"
+            src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+            alt="">
+          <div class="posted-blog-image-wrapper">
+            <ul>
+              <li>Olivia Rhye</li>
+              <li>20 Jan 2022</li>
+            </ul>
+            <p class="posted-blog__category">Design</p>
+
+          </div>
+        </div>
+        <a href="posted-blog.html" class="posted-blog__title">Design Beyond Boundaries: Breaking Barriers and Shaping
+          the Future</a>
+        <p class="posted-blog__description">How do you create compelling presentations that wow your
+          colleagues and impress your managers? Look no further.</p>
+        <div class="posted-blog__sub-category">
+          <ul class="blog-sub-category">
+            <li class="sub-category__heading">Graphic Design</li>
+            <li class="sub-category__heading">Interior Design</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- Post 3 -->
+      <div class="posted-blog product">
+
+        <div class="posted-blog-image">
+          <img class="posted-blog__image"
+            src="https://media.istockphoto.com/id/1409417338/photo/build-trust-message-written-on-yellow-background-with-felt-tip-pen-business-confidence.webp?b=1&s=170667a&w=0&k=20&c=L05G4BYKS2iVjazqbRbvVH3GWIRH1rtpF5E6IcGTSBk="
+            alt="">
+          <div class="posted-blog-image-wrapper">
+            <ul>
+              <li>Olivia Rhye</li>
+              <li>20 Jan 2022</li>
+            </ul>
+            <p class="posted-blog__category">Research</p>
+          </div>
+        </div>
+        <a href="posted-blog.html" class="posted-blog__title">Ethics in Research: Upholding Integrity and
+          Responsibility</a>
+        <p class="posted-blog__description">Navigating Ethical Considerations and Ensuring Trustworthiness in Research
+          Practices.</p>
+        <div class="posted-blog__sub-category">
+          <ul class="blog-sub-category">
+            <li class="sub-category__heading">Technology Research</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Post 1 -->
+      <div class="posted-blog development">
+
+        <div class="posted-blog-image">
+          <img class="posted-blog__image"
+            src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QmFja2VuZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60"
+            alt="">
+          <div class="posted-blog-image-wrapper">
+            <ul>
+              <li>Olivia Rhye</li>
+              <li>20 Jan 2022</li>
+            </ul>
+            <p class="posted-blog__category">Development</p>
+          </div>
+        </div>
+        <a href="posted-blog.html" class="posted-blog__title">Backend Brilliance: Powering Web Applications with Robust
+          Development</a>
+        <p class="posted-blog__description">Harnessing the Strength of Server-Side Technologies for Scalable and Secure
+          Websites.</p>
+        <div class="posted-blog__sub-category">
+          <ul class="blog-sub-category">
+            <li class="sub-category__heading">Mobile App Development</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="posted-blog product">
+
+        <div class="posted-blog-image">
+          <img class="posted-blog__image"
+            src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHdlYnNpdGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+            alt="">
+          <div class="posted-blog-image-wrapper">
+            <ul>
+              <li>Olivia Rhye</li>
+              <li>20 Jan 2022</li>
+            </ul>
+            <p class="posted-blog__category">Research</p>
+          </div>
+        </div>
+        <a href="posted-blog.html" class="posted-blog__title">Data Analysis: Unveiling Patterns and Insights in
+          Research</a>
+        <p class="posted-blog__description">HUnlocking the Power of Statistical Methods and Analytical Techniques</p>
+        <div class="posted-blog__sub-category">
+          <ul class="blog-sub-category">
+            <li class="sub-category__heading">Scientific Research</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Post 3 -->
+      <div class="posted-blog design">
+
+        <div class="posted-blog-image">
+          <img class="posted-blog__image"
+            src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8RGVzaWduJTIwQmV5b25kJTIwQm91bmRhcmllcyUzQSUyMEJyZWFraW5nJTIwQmFycmllcnMlMjBhbmQlMjBTaGFwaW5nJTIwdGhlJTIwRnV0dXJlfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+            alt="">
+          <div class="posted-blog-image-wrapper">
+            <ul>
+              <li>Olivia Rhye</li>
+              <li>20 Jan 2022</li>
+            </ul>
+            <p class="posted-blog__category">Design</p>
+          </div>
+        </div>
+        <a href="posted-blog.html" class="posted-blog__title">Design: Where Science Meets Aesthetics</a>
+        <p class="posted-blog__description">The Intersection of Art and Engineering in Creating Innovative and Beautiful
+          Solutions.</p>
+        <div class="posted-blog__sub-category">
+          <ul class="blog-sub-category">
+            <li class="sub-category__heading">Industrial Design</li>
+            <li class="sub-category__heading">Web Design</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <!-- Post 3 -->
+      <div class="posted-blog design">
+
+        <div class="posted-blog-image">
+          <img class="posted-blog__image"
+            src="https://images.unsplash.com/photo-1498075702571-ecb018f3752d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RnJvbSUyMEluc3BpcmF0aW9uJTIwdG8lMjBDcmVhdGlvbiUzQSUyMFVudmVpbGluZyUyMHRoZSUyMERlc2lnbiUyMFByb2Nlc3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+            alt="">
+          <div class="posted-blog-image-wrapper">
+            <ul>
+              <li>Olivia Rhye</li>
+              <li>20 Jan 2022</li>
+            </ul>
+            <p class="posted-blog__category">Design</p>
+          </div>
+        </div>
+        <a href="posted-blog.html" class="posted-blog__title">From Inspiration to Creation: Unveiling the Design
+          Process</a>
+        <p class="posted-blog__description">Peering into the Minds of Designers and Unraveling the Journey from Idea to
+          Tangible Masterpiece.</p>
+        <div class="posted-blog__sub-category">
+          <ul class="blog-sub-category">
+            <li class="sub-category__heading">UX/UI Design</li>
+            <li class="sub-category__heading">Web Design</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <h2 class="footer__heading">Subscribe to our newsletter for the latest updates.
+    </h2>
+    <p class="footer__sub-heading">Join over 4000+ user already growing with BlogSpot.</p>
+    <form class="hero-newsletter-form">
+      <input type="email" placeholder="Enter your email">
+      <button class="hero-newsletter__subscribw-btn">Subscribe</button>
+    </form>
+
+    <div class="footer__menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li>News</li>
+        <li>Upcoming Event</li>
+        <li>Jobs</li>
+      </ul>
+    </div>
+
+    <div class="footer__bottom">
+      <h1>BlogSpot.</h1>
+      <p>Designed and developed by <a href="https://aqeeb.dev/">aqeeb.dev/</a></p>
+    </div>
+  </footer>
+
+  <div class="overlay hidden"></div>
+  <div class="modal hidden">
+    <h2>I Apologize!</h2>
+    <div class="close-modal">
+      <i class="bi bi-x "></i>
+    </div>
+    <p>Currently not implemented the functionality of sorting in this filter section.</p>
+  </div>
+
+  <!-- JQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+    crossorigin="anonymous"></script>
+
+  <!-- JS Script-->
+  <script defer type="module" src="./js/script.js"></script>
+  <script type="module" src="./js/animation.js"></script>
+</body>
+
+</html>
